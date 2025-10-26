@@ -12,21 +12,44 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;" aria-hidden="true" focusable="false">
+        <symbol id="icon-menu" viewBox="0 0 32 32">
+            <path fill="currentColor" d="M2 6h28v6H2zm0 8h28v6H2zm0 8h28v6H2z" />
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 28 28">
+            <path fill="currentColor" d="M25.5 2h-23C1.125 2 0 3.125 0 4.5v19c0 1.375 1.125 2.5 2.5 2.5h23c1.375 0 2.5-1.125 2.5-2.5v-19C28 3.125 26.875 2 25.5 2zm-5.859 15.641l-2.281 2.281c-.203.203-.516.203-.719 0L14 15.281l-2.641 2.641c-.203.203-.516.203-.719 0l-2.281-2.281c-.203-.203-.203-.516 0-.719L10.281 14 7.64 11.359c-.203-.203-.203-.516 0-.719l2.281-2.281c.203-.203.516-.203.719 0L14 12.719l2.641-2.641c.203-.203.516-.203.719 0l2.281 2.281c.203.203.203.516 0 .719L18.719 14l2.641 2.641c.203.203.203.516 0 .719z" />
+        </symbol>
+    </svg>
     <header class="site-header" id="top">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Primary navigation">
             <a class="brand" href="#top">Bhushan Chess Academy</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <svg class="nav-toggle-icon nav-toggle-open" width="26" height="26" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-menu"></use>
+                </svg>
+                <svg class="nav-toggle-icon nav-toggle-close" width="26" height="26" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
             </button>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#benefits">Why Us</a></li>
-                <li><a href="#coaches">Coaches</a></li>
-                <li><a href="#testimonials">Success Stories</a></li>
-                <li><a href="#contact" class="cta-link">Enroll Now</a></li>
+            <ul class="nav-links" id="primary-navigation">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#programs">Programs</a>
+                </li>
+                <li>
+                    <a href="#benefits">Why Us</a>
+                </li>
+                <li>
+                    <a href="#coaches">Coaches</a>
+                </li>
+                <li>
+                    <a href="#testimonials">Success Stories</a>
+                </li>
+                <li>
+                    <a href="#contact" class="cta-link">Enroll Now</a>
+                </li>
             </ul>
         </nav>
         <section class="hero" id="hero">
@@ -303,17 +326,47 @@
                 <a class="footer-brand" href="#top">Bhushan Chess Academy</a>
                 <p>Champions aren't born — they're prepared with discipline, curiosity, and a team behind them.</p>
                 <div class="footer-icons">
-                    <a href="https://www.instagram.com/unfiltered.bhushan" aria-label="Instagram @unfiltered.bhushan">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram logo" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/bhushcodes" aria-label="LinkedIn bhushcodes">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn logo" />
-                    </a>
-                    <a href="https://www.bhushanchessacademy.com" aria-label="Portfolio">
-                        <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Portfolio coffee mug icon" />
+                    <a href="https://bhushan-pawar.vercel.app/" aria-label="Portfolio site">
+                        <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <linearGradient id="portfolioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00d2ff" />
+                                    <stop offset="100%" stop-color="#3a7bd5" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M6 6h12a2 2 0 0 1 2 2v11H4V8a2 2 0 0 1 2-2Z" fill="url(#portfolioGradient)" opacity="0.45" />
+                            <path d="M8 5.2h8v2.1H8z" fill="#3a7bd5" />
+                            <rect x="6.5" y="9.5" width="11" height="6" rx="1.2" fill="none" stroke="#3a7bd5" stroke-width="1.2" />
+                            <path d="M8.5 11.3h4.5M8.5 13.7h6" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.85" />
+                        </svg>
                     </a>
                     <a href="https://github.com/bhushcodes" aria-label="GitHub @bhushcodes">
-                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub logo" />
+                        <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#ffffff" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.727-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.758-1.333-1.758-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.24 1.84 1.24 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.606-2.665-.305-5.466-1.332-5.466-5.932 0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404c1.02.004 2.047.138 3.003.404 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.435.372.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12Z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bhushcodes/" aria-label="LinkedIn bhushcodes">
+                        <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7.04 6.5A1.54 1.54 0 1 1 4 6.5a1.54 1.54 0 0 1 3.04 0ZM4.25 9h3.58v10H4.25V9Zm5.24 0h3.43v1.36h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.48V19H16.2v-4.3c0-1.03-.02-2.36-1.44-2.36-1.45 0-1.67 1.13-1.67 2.29V19h-3.6V9Z" fill="#0A66C2" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/unfiltered.bhushan/" aria-label="Instagram @unfiltered.bhushan">
+                        <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <radialGradient id="instagramGradient" cx="30%" cy="30%" r="70%">
+                                    <stop offset="0%" stop-color="#fdf497" />
+                                    <stop offset="45%" stop-color="#fd5949" />
+                                    <stop offset="60%" stop-color="#d6249f" />
+                                    <stop offset="90%" stop-color="#285AEB" />
+                                </radialGradient>
+                            </defs>
+                            <path d="M12 6.25A5.75 5.75 0 1 1 6.25 12 5.75 5.75 0 0 1 12 6.25zm0 2.5A3.25 3.25 0 1 0 15.25 12 3.25 3.25 0 0 0 12 8.75zm5.2-2.3a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15Z" fill="url(#instagramGradient)" />
+                        </svg>
+                    </a>
+                    <a href="https://x.com/bhushcodes" aria-label="X @bhushcodes">
+                        <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M16.9 6h-2.06l-2.86 3.7L9.9 6H6.5l4.12 5.9L6 18h2.06l3.03-3.96L14.26 18h3.4l-4.3-6.18L16.9 6Z" fill="#ffffff" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -343,7 +396,9 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Built with ❤️ + ☕ by Bhushan Pawar</p>
+            <div class="footer-bottom-content">
+                <p class="footer-crafted">Built with ❤️ + ☕ by Bhushan Pawar</p>
+            </div>
             <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </footer>
@@ -351,22 +406,67 @@
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
+        const navbar = document.querySelector('.navbar');
+
+        const closeNav = () => {
+            if (!navLinks || !navToggle) return;
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('nav-open');
+        };
 
         if (navToggle && navLinks) {
             navToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('open');
-                navToggle.classList.toggle('open');
+                const isOpen = navLinks.classList.toggle('open');
+                navToggle.classList.toggle('open', isOpen);
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+                document.body.classList.toggle('nav-open', isOpen);
             });
 
-            document.querySelectorAll('.nav-links a').forEach((link) => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('open');
-                    navToggle.classList.remove('open');
-                });
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+                    closeNav();
+                    navToggle.focus();
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 960) {
+                    closeNav();
+                }
             });
         }
 
-        const navbar = document.querySelector('.navbar');
+        const smoothScrollTo = (target) => {
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight + 1;
+            const finalPosition = target.id === 'top' ? 0 : Math.max(targetPosition, 0);
+            window.scrollTo({
+                top: finalPosition,
+                behavior: 'smooth'
+            });
+        };
+
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+        anchorLinks.forEach((anchor) => {
+            anchor.addEventListener('click', (event) => {
+                const href = anchor.getAttribute('href');
+                if (!href || href.length <= 1) {
+                    return;
+                }
+
+                const destination = document.querySelector(href);
+                if (!destination) {
+                    return;
+                }
+
+                event.preventDefault();
+                closeNav();
+                smoothScrollTo(destination);
+            });
+        });
+
         const handleNavbarState = () => {
             if (!navbar) return;
             if (window.scrollY > 40) {
@@ -379,10 +479,12 @@
         handleNavbarState();
         window.addEventListener('scroll', handleNavbarState);
 
+        const WHATSAPP_NUMBER = '917219678798';
         const formspreeForms = document.querySelectorAll('form[data-formspree]');
         formspreeForms.forEach((form) => {
             const formEndpoint = form.getAttribute('data-formspree');
             const formMessage = form.querySelector('.form-message');
+            const formId = form.getAttribute('id');
 
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
@@ -423,6 +525,20 @@
                         if (formMessage) {
                             formMessage.textContent = 'Thanks! We will be in touch shortly.';
                             formMessage.classList.remove('error');
+                        }
+                        if (formId === 'contact-form') {
+                            const name = (formData.get('name') || 'Chess enthusiast').toString().trim();
+                            const level = (formData.get('level') || '').toString().trim();
+                            const goal = (formData.get('goal') || '').toString().replace(/\s+/g, ' ').trim();
+                            const parts = [`Hi Bhushan! I'm ${name}.`];
+                            if (level) {
+                                parts.push(`My current level is ${level}.`);
+                            }
+                            if (goal) {
+                                parts.push(`Here is my goal: ${goal}`);
+                            }
+                            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(parts.join(' '))}`;
+                            window.open(whatsappUrl, '_blank');
                         }
                         form.reset();
                     } else {
